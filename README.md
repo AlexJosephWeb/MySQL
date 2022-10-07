@@ -8,7 +8,7 @@ MySQL is a relational database management system, open-source, free, is ideal fo
 MySQL is very fast, reliable, scalable, and easy to use, is cross-platform, and is compliant with the ANSI SQL standard.
 MySQL was first released in 1995 and is developed, distributed, and supported by Oracle Corporation.
 
-*I learned using MySQL almost 2 decades ago while building a tool to make my thesis project "EcoLodgical" interactive!*
+*I learned MySQL almost 2 decades ago while building a tool to make my thesis project "EcoLodgical" interactive!*
 
 
 ## Database Design Considerations
