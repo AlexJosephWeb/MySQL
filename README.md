@@ -21,11 +21,9 @@ A very large number of web developers around the world!
 ## Database Design Considerations
 
 1. Always use proper datatype
-Use datatypes based on the nature of data. If you use irrelevant datatypes it may consume more space or may lead to errors.
-Example: Using varchar (20) to store date time values instead of DATETIME datatype will lead to errors during date time-related calculations and there is also a possible case of storing invalid data.
+Using varchar (20) to store date time values instead of DATETIME datatype will lead to errors during date time-related calculations and there is also a possible case of storing invalid data.
 
-2. Use CHAR (1) over VARCHAR(1)
-If you string a single character, use CHAR(1) instead of VARCHAR(1) because VARCHAR(1) will take extra byte to store information
+2. Use CHAR (1) over VARCHAR(1) because VARCHAR(1) will take extra byte to store information
 
 3. Use CHAR datatype to store only fixed length data
 Example: Using char(1000) instead of varchar(1000) will consume more space if the length of data is less than 1000
