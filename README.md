@@ -63,6 +63,8 @@ instead, use EXISTS clause
 If EXISTS(SELECT * from Table WHERE col=’some value’)
 which is faster in response time.
 
+*Reference: https://www.crayondata.com/top-10-best-practices-in-mysql/*
+
 ## Connect to a Database
 
 Do this in a secure way...
