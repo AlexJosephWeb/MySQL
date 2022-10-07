@@ -20,10 +20,22 @@ A very large number of web developers around the world!
 
 ## Database Design Considerations
 
-## Connect
+## Connect to a Database
+
+Do this in a secure way...
 
 ## Add Data
 
+Insert data
+
 ## Manipulate Data
+
+Read the data
+
+Join the data
+
+Edit the data
+
+Delete the data
 
 ## Optimize
