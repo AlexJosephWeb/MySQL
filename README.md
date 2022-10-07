@@ -10,6 +10,12 @@ MySQL was first released in 1995 and is developed, distributed, and supported by
 
 *I learned MySQL almost 2 decades ago while building a tool to make my thesis project "EcoLodgical" interactive!*
 
+## Who uses MySQL?
+
+*Everyone*
+Huge websites like Facebook, Twitter, Airbnb, Booking.com, Uber, GitHub, YouTube, etc.
+Content Management Systems like WordPress, Drupal, Joomla!, Contao, etc.
+A very large number of web developers around the world!
 
 ## Database Design Considerations
 
