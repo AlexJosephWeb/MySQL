@@ -67,7 +67,7 @@ which is faster in response time.
 
 1. Create a new PHP file and name it db_connnection.php 
 
-'''
+```
 <?php
 function OpenCon()
  {
@@ -86,7 +86,7 @@ function CloseCon($conn)
  }
    
 ?>
-'''
+```
 
 ## Add Data
 
