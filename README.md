@@ -99,7 +99,9 @@ CloseCon($conn);
 ?>
 ```
 
-## Add Data
+## Manipulate Data
+
+### Add Data
 
 Insert a row...
 
@@ -127,15 +129,102 @@ if(mysqli_query($conn, $sql)){
 }
 ```
 
-## Manipulate Data
+### Read the data
 
-Read the data
+```
+$sql = "SELECT * FROM persons";
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+        echo "<table>";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>first_name</th>";
+                echo "<th>last_name</th>";
+                echo "<th>email</th>";
+            echo "</tr>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['first_name'] . "</td>";
+                echo "<td>" . $row['last_name'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        // Free result set
+        mysqli_free_result($result);
+    } else{
+        echo "No records matching your query were found.";
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+```
+Limit the SELECT...
 
-Join the data
+```
+$sql = "SELECT * FROM persons LIMIT 3";
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+        echo "<table>";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>first_name</th>";
+                echo "<th>last_name</th>";
+                echo "<th>email</th>";
+            echo "</tr>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['first_name'] . "</td>";
+                echo "<td>" . $row['last_name'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        // Close result set
+        mysqli_free_result($result);
+    } else{
+        echo "No records matching your query were found.";
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+```
 
-Edit the data
+### Join the data
 
-Delete the data
+```
+$array = array("one", "two", "three", "four", "five");
+
+// Imploding array with different separators
+echo join(", ", $array); // comma plus space
+echo join("_", $array);  // underscore
+echo join("-", $array);  // hyphen
+echo join(" ", $array);  // space
+```
+
+### Edit the data
+
+```
+$sql = "UPDATE persons SET email='peterparker_new@mail.com' WHERE id=1";
+if(mysqli_query($link, $sql)){
+    echo "Records were updated successfully.";
+} else {
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+```
+
+### Delete the data
+
+```
+$sql = "DELETE FROM persons WHERE first_name='John'";
+if(mysqli_query($link, $sql)){
+    echo "Records were deleted successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+```
 
 ## Optimize
 
