@@ -293,7 +293,12 @@ if(mysqli_query($link, $sql)){
 
 ## Optimize
 
-## POST and GET
+1. Be more efficient by indexing all your predicates by WHERE, JOIN, ORDER BY, and GROUP BY clauses
+2. Filter results
+3. Optimize subqueries
+4. Query the cache
+
+## Send data via POST and GET
 
 ### POST
 ```
