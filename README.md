@@ -293,7 +293,34 @@ if(mysqli_query($link, $sql)){
 
 ## Optimize
 
+## POST and GET
+
+### POST
+```
+<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+    <label for="inputName">Name:</label>
+    <input type="text" name="name" id="inputName">
+    <input type="submit" value="Submit">
+</form>
+```
+
+### Advantages and Disadvantages of Using the POST Method
+It is more secure than GET because user-entered information is never visible in the URL query string or in the server logs.
+There is a much larger limit on the amount of data that can be passed and one can send text data as well as binary data (uploading a file) using POST.
+Since the data sent by the POST method is not visible in the URL, so it is not possible to bookmark the page with specific query.
+
+### GET
+```
+http://www.example.com/action.php?name=john&age=24
+```
+
+### Advantages and Disadvantages of Using the GET Method
+Since the data sent by the GET method are displayed in the URL, it is possible to bookmark the page with specific query string values.
+The GET method is not suitable for passing sensitive information such as the username and password, because these are fully visible in the URL query string as well as potentially stored in the client browser's memory as a visited page.
+Because the GET method assigns data to a server environment variable, the length of the URL is limited. So, there is a limitation for the total data to be sent.
+
 ## Good References
 
 https://www.crayondata.com/top-10-best-practices-in-mysql/
 https://pankajconnect.medium.com/best-practices-for-mysql-performance-optimization-and-mysql-use-indexes-cd3dda51b8b0
+https://www.tutorialrepublic.com/php-tutorial/
