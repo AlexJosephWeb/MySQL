@@ -99,7 +99,7 @@ CloseCon($conn);
 ?>
 ```
 
-Using PDO (PHP Data Objects) is the newest and most robust of them. PDO has a consistent interface across many different types of database, uses an object-oriented approach, and supports more features offered by newer databases.
+Using PDO (PHP Data Objects) is the newest and most robust of them. PDO has a consistent interface across many different types of database, uses an object-oriented approach, and supports more features offered by newer databases. ***Read more https://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059***
 
 ```
 <?php
