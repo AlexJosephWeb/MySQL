@@ -389,3 +389,4 @@ Because the GET method assigns data to a server environment variable, the length
 - https://www.crayondata.com/top-10-best-practices-in-mysql/
 - https://pankajconnect.medium.com/best-practices-for-mysql-performance-optimization-and-mysql-use-indexes-cd3dda51b8b0
 - https://www.tutorialrepublic.com/php-tutorial/
+- https://phpbestpractices.org/
