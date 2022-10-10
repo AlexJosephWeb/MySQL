@@ -65,7 +65,28 @@ which is faster in response time.
 
 ## Connect to a Database
 
-Do this in a secure way...
+1. Create a new PHP file and name it db_connnection.php 
+
+'''
+<?php
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "root";
+ $dbpass = "1234";
+ $db = "example";
+ $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+ 
+ return $conn;
+ }
+ 
+function CloseCon($conn)
+ {
+ $conn -> close();
+ }
+   
+?>
+'''
 
 ## Add Data
 
