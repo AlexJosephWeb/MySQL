@@ -88,6 +88,17 @@ function CloseCon($conn)
 ?>
 ```
 
+2. Connect to database by including in each PHP file (include ‘connection.php’) 
+
+```
+<?php
+include 'db_connection.php';
+$conn = OpenCon();
+echo "Connected Successfully";
+CloseCon($conn);
+?>
+```
+
 ## Add Data
 
 Insert data
